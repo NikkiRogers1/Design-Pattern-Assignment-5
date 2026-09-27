@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
 
@@ -8,6 +9,23 @@ public class Main {
 
         manager1.setVolume(75);
         System.out.println(manager2.getVolume());
-        
+
+
+        AudioSystem audio = new AudioSystem();
+        audio.playSound();
+
+        manager1.setResolution("4K");
+        System.out.println(manager2.getResolution());
+
+        GraphicRendering settings = new GraphicRendering();
+        settings.showGrahic();
+
+        audio.changeVolume();
+        System.out.println(manager2.getVolume());
+
+
+
+
+
     }
 }

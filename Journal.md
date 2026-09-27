@@ -3,3 +3,5 @@ Phase 1- I know I have a Singleton because when I get two variables from getInst
 
 Phase 2 - 
 With eager initialization, the object is created as soon as the class loads, while with lazy loading, the object is created when it is actually needed. Sometimes an object might not be needed right away, so lazy loading can prevent wasting memory. The downside is that when the object is finally needed, it has to be created at that time, which could slow down the program a little. For the ConfigurationManager, lazy loading could be useful because some of the settings might not need to be created right away and could waste memory.
+ 
+ Phase 3- From the outside, you cannot tell that these classes depend on ConfigurationManager. The classes rely on the manager Singleton, and you see the dependency in the methods, not in the constructor. Hidden dependencies are when a class relies on the Singleton, but you cannot see that dependency in the constructor. You see it inside the methods instead. It makes unit testing individual classes in isolation more challenging because the class depends on the Singleton being available.
