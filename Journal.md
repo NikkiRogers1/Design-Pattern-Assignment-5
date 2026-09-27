@@ -1,2 +1,5 @@
 # Journal
 Phase 1- I know I have a Singleton because when I get two variables from getInstance(), checking them with `==` returns true. This means both variables are pointing to the exact same object. The private constructor prevents other classes from creating a new ConfigurationManager object. The getInstance() method is static so I can access it without already having an object. Together, these make sure there is only one ConfigurationManager that can be accessed.
+
+Phase 2 - 
+With eager initialization, the object is created as soon as the class loads, while with lazy loading, the object is created when it is actually needed. Sometimes an object might not be needed right away, so lazy loading can prevent wasting memory. The downside is that when the object is finally needed, it has to be created at that time, which could slow down the program a little. For the ConfigurationManager, lazy loading could be useful because some of the settings might not need to be created right away and could waste memory.

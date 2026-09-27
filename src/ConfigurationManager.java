@@ -1,11 +1,15 @@
 public class ConfigurationManager {
-    private static ConfigurationManager uniqueInstance = new ConfigurationManager();
+    private static ConfigurationManager uniqueInstance;
     private int volume;
     private String resolution;
     private String displayMode;
-    private ConfigurationManager () {}
+    private ConfigurationManager () { 
+        System.out.println("ConfigurationManager Created.");}
 
     public static ConfigurationManager getInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new ConfigurationManager();
+        }
         
         return uniqueInstance;
 
