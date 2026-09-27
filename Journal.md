@@ -1,2 +1,2 @@
 # Journal
-Write your Journal questions and notes here.
+Phase 1- I know I have a Singleton because when I get two variables from getInstance(), checking them with `==` returns true. This means both variables are pointing to the exact same object. The private constructor prevents other classes from creating a new ConfigurationManager object. The getInstance() method is static so I can access it without already having an object. Together, these make sure there is only one ConfigurationManager that can be accessed.
